@@ -1,21 +1,14 @@
 # palindromes_incpp
-CSC 3110 Program # 2: Pointing at
-Palindromes
-Assigned: Thursday: October 18, 2017
-Due: Saturday: October 27, 2018 by 11:55pm (on Blackboard)
-Program Instructional Guide
+Program # 2: Pointing at Palindromes
+
 - Intro
-The term palindrome is define as a word, phrase, number, or other sequence of
-characters which reads the same backward as forward, such as MADAM or KAYAK.
-The term “palindrome” has Greek roots from the words palin (“again”) and dromos
-(“way, direction”) by way of the English writer Ben Jonson. Some palindromes seem
-to be philosophical. Others tell a story. In any case, they are unique and often times
-creatively thoughtful compositions of literature used for constrained writing.
+
 For this program, you will write a program that utilizes pointers for palindrome
 testing. The program is a simulated interaction of an airline account creation. The
 account parameters will consist of a passenger name, password and pin. Once the
 account has been created the program will test if the passenger’s password is a
 palindrome and print the result out to the screen (i.e, palindrome, not a palindrome).
+
 Program Objectives
 The goal of this project is to create a C++ program that will help to develop your
 programming skills in understanding the implementation of specifically pointers, in
@@ -23,6 +16,7 @@ addition to developing void functions, structures and conditionals. The simulate
 account creation will initially ask the user to enter a name, birthdate, password and pin.
 You should have a welcome introduction to your airline ticket purchaser notifying them
 of the name of your commercial airline.
+
 - Palindrome Function
 Your program will then create a function (check_Palindrome) that will test whether
 the passenger’s password is a palindrome or not. If the password entered is a

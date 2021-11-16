@@ -1,0 +1,109 @@
+/* Name: Ronae Briley 
+# Date: 10/19/2021
+# Class: CSC 3110
+# Pledge: I have neither given nor received unauthorized aid on this
+program.
+# Description: Palidromes is a program that...
+# Input: The user types commands such as name, birthdate
+# password, and pin. 
+# Output:The program will display directions and 
+# whether or not the provided password is a palindrome.  
+play.
+# I used an online compiler to run my C++ code. (cpp.sh)
+*/
+
+
+
+#include <iostream>
+#include <cctype>
+#include <cstring>
+
+using namespace std; 
+
+char password[ ] = "TBD";
+string pass; 
+
+
+
+/**
+* Prints a welcome message
+* Gets user's name, birthdate, password, and pin
+*/
+string welcome() {
+	string x = " ";
+    cout<<("---------------------------------")<< endl;
+    cout<<("        Briley's Airlines        ")<< endl;
+    cout<<("---------------------------------")<< endl;
+    string firstName;
+	string lastName;
+	string birthdate;
+	string pin;
+	cout << ("Please enter the account first and last name.")<< endl;
+	cin >> firstName >> lastName;
+	cout << ("Please enter your birthdate.")<< endl;
+	cin >> birthdate;
+	cout << (" ")<< endl;
+	cout << ("Welcome ")<< firstName << " " << lastName << "!" << endl;
+	cout<<("-----------------------------")<< endl;
+	cout << (" ")<< endl;
+	cout << ("Please enter your password.")<< endl;
+	cin >> password;
+	pass = password; 
+	cout << ("Please enter your pin.")<< endl;
+	cin >> pin;
+	cout << ("----------------------------------")<< endl;
+	cout << ("  Briley Airlines Account Created ")<< endl;
+	cout << ("----------------------------------")<< endl;
+	return x;
+}
+
+/**
+* Used to change and temporarily store 
+* the rotation of each character in the string
+*/
+void rotate_Positions(char p){
+    char *locationOFpointer = &p;
+}
+
+/**
+* Returns true if password is a palindrome, 
+* turns false if it is not a palindrome 
+*/
+bool checkPalindrome(char *p){
+    p = password; 
+
+    int min = 0;
+    int max = strlen(password) - 1; //length of the string - 1 is the length of password 
+
+    while (*p != '\0'){ 
+ 
+		if (tolower(pass[min]) != tolower(pass[max])){ //compares two characters in the password 
+			return false;
+
+    	} else {
+        	p++; //prints out each character in the password 
+    		min++;
+    		max--;
+		}
+
+	}	
+	return true;
+}
+    
+
+int main () { 
+	welcome();
+	checkPalindrome(password);
+	if (checkPalindrome(password)){
+		cout << password << (" is a palindrome!")<< endl;
+		cout << " " << endl;
+		cout << "Address of pointer palindrome: "<< &password << endl;
+	}
+	if (!checkPalindrome(password)){
+		cout << password << (" is not a palindrome :-( ")<< endl;
+		cout << " " << endl;
+		cout << "Address of pointer password: "<< &password << endl;
+	}
+} 
+
+
